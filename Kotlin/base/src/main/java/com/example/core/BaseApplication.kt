@@ -10,9 +10,9 @@ class BaseApplication : Application() {
     }
 
     companion object {
-        private var currentApplication: Context? = null
-        fun currentApplication(): Context {
-            return currentApplication!!
-        }
+        @JvmStatic
+        @get:JvmName("currentApplication")
+        var currentApplication: Context? = null
+            private set
     }
 }
